@@ -14,17 +14,17 @@ public class MainTest {
     }
   
 @Test
-//Noon should be from 6:00:00 to 12:00:00
+//Noon should be from 6:00:00 to 11:59:59
 public void testMorningPeriod() {
-    Date time = new Date(2023, 8, 26, 11, 00); // Time: 11:0:00
+    Date time = new Date(2023, 8, 26, 11, 00); // Time: 11:00:00
     DayPeriod dayPeriod = new DayPeriod();
     assertEquals("Morning", dayPeriod.get_period( time));
 	}
 
 @Test
-//Noon should be from 12:00:00 to 18:00:00
+//Noon should be from 12:00:00 to 17:59:59
 public void testNoonPeriod() {
-    Date time = new Date(2023, 8, 26, 17, 00); // Time: 17:0:00
+    Date time = new Date(2023, 8, 26, 17, 10); // Time: 17:10:00
     DayPeriod dayPeriod = new DayPeriod();
     assertEquals("Noon", dayPeriod.get_period( time));
 	}
@@ -32,7 +32,7 @@ public void testNoonPeriod() {
 @Test
 //night should be from 00:00:00 to 05:59:59
 public void testNightPeriod() {
-    Date time = new Date(2023, 8, 26, 01, 00); // Time: 5:0:00
+    Date time = new Date(2023, 8, 26, 01, 00); // Time: 01:00:00
     DayPeriod dayPeriod = new DayPeriod();
     assertEquals("Night", "Night");
 	}
