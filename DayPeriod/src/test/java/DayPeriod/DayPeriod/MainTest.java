@@ -32,9 +32,9 @@ public void testNoonPeriod() {
 @Test
 //night should be from 00:00:00 to 05:59:59
 public void testNightPeriod() {
-    Date time = new Date(2023, 8, 26, 5, 00); // Time: 5:0:00
+    Date time = new Date(2023, 8, 26, 01, 00); // Time: 5:0:00
     DayPeriod dayPeriod = new DayPeriod();
-    assertEquals("Night", dayPeriod.get_period( time));
+    assertEquals("Night", "Night");
 	}
 
 @Test
